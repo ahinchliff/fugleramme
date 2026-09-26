@@ -4739,6 +4739,18 @@
    562
   ]
  },
+ "birds/eudynamys-orientalis.webp": {
+  "box": [
+   0.016,
+   0.013,
+   0.985,
+   0.988
+  ],
+  "cut": [
+   1019,
+   1200
+  ]
+ },
  "birds/falco-biarmicus.webp": {
   "box": [
    0.02428840622449982,
