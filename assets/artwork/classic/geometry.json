@@ -11219,6 +11219,18 @@
    1200
   ]
  },
+ "birds/todiramphus-sanctus-2.webp": {
+  "box": [
+   0.0158,
+   0.0314,
+   0.6429,
+   0.9721
+  ],
+  "cut": [
+   1200,
+   621
+  ]
+ },
  "birds/todiramphus-sanctus.webp": {
   "box": [
    0.0158,
