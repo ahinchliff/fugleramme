@@ -2567,6 +2567,18 @@
    916
   ]
  },
+ "birds/calyptorhynchus-banksii.webp": {
+  "box": [
+   0.0213,
+   0.0142,
+   0.9787,
+   0.9917
+  ],
+  "cut": [
+   846,
+   1200
+  ]
+ },
  "birds/canachites-canadensis.webp": {
   "box": [
    0.017221204902196054,
