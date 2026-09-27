@@ -11219,6 +11219,18 @@
    1200
   ]
  },
+ "birds/todiramphus-sanctus.webp": {
+  "box": [
+   0.0158,
+   0.0217,
+   0.9867,
+   0.9315
+  ],
+  "cut": [
+   1200,
+   876
+  ]
+ },
  "birds/toxostoma-rufum.webp": {
   "box": [
    0.05915606936416185,
