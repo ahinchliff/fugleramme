@@ -5507,6 +5507,18 @@
    765
   ]
  },
+ "birds/gallirallus-philippensis.webp": {
+  "box": [
+   0.1792,
+   0.1264,
+   0.7375,
+   0.9005
+  ],
+  "cut": [
+   1200,
+   633
+  ]
+ },
  "birds/garrulus-glandarius-2.webp": {
   "box": [
    0.018477805852890015,
