@@ -491,6 +491,18 @@
    674
   ]
  },
+ "birds/alisterus-scapularis.webp": {
+  "box": [
+   0.0183,
+   0.2792,
+   0.9805,
+   0.9458
+  ],
+  "cut": [
+   872,
+   1200
+  ]
+ },
  "birds/alle-alle.webp": {
   "box": [
    0.14417690826914817,
