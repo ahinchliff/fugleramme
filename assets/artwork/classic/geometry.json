@@ -6959,6 +6959,18 @@
    1200
   ]
  },
+ "birds/lonchura-punctulata.webp": {
+  "box": [
+   0.0125,
+   0.0176,
+   0.99,
+   0.8513
+  ],
+  "cut": [
+   1200,
+   1022
+  ]
+ },
  "birds/lophodytes-cucullatus.webp": {
   "box": [
    0.25391593024844217,
