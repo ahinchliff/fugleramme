@@ -9335,6 +9335,18 @@
    1056
   ]
  },
+ "birds/pitta-versicolor.webp": {
+  "box": [
+   0.2453,
+   0.2733,
+   0.785,
+   0.6017
+  ],
+  "cut": [
+   958,
+   1200
+  ]
+ },
  "birds/platalea-leucorodia.webp": {
   "box": [
    0.11358917406106028,
