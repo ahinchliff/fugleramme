@@ -3899,6 +3899,18 @@
    738
   ]
  },
+ "birds/cracticus-nigrogularis.webp": {
+  "box": [
+   0.0841,
+   0.4583,
+   0.9763,
+   0.7708
+  ],
+  "cut": [
+   927,
+   1200
+  ]
+ },
  "birds/crex-crex-2.webp": {
   "box": [
    0.019273521900177,
