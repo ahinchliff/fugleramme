@@ -11939,6 +11939,18 @@
    1037
   ]
  },
+ "birds/trichoglossus-chlorolepidotus.webp": {
+  "box": [
+   0.015473887814313346,
+   0.14333333333333334,
+   0.9100580270793037,
+   0.7933333333333333
+  ],
+  "cut": [
+   1034,
+   1200
+  ]
+ },
  "birds/trichoglossus-moluccanus.webp": {
   "box": [
    0.120041,
