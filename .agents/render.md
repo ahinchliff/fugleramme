@@ -10,19 +10,16 @@ Covers `service.py`, `panel.py`, `buttons.py` and the `render/` package.
 
 ## The panel sizes itself (`panel.py`)
 
-- `resolution_of` is the single answer to how big the page is: the attached Inky, or `FALLBACK_PANEL_RESOLUTION`. The panel's render derives from it; the kiosk's only while locked.
+- `resolution_of` is the single answer to how big the page is: the attached Inky, or `FALLBACK_PANEL_RESOLUTION`. It is never a setting. The panel's render derives from it; the kiosk's only while locked.
 - The admin resolution setting picks the kiosk's **height**. Locked to the panel (`web_lock`, the default), `settings.web_size` takes the width from the panel's aspect; unlocked, or with no panel, the kiosk takes its own shape from `web_aspect` and `web_portrait` and ignores the rotation (the admin dims Rotation when there is no panel). The collage packs into whatever rectangle it is handed, so a different shape is a different page, not a scaled one: the birds land elsewhere. The admin preview shows the panel's page when there is a panel, the kiosk's when there is none.
 - `settings.rotation` (counter-clockwise) shapes the panel and a locked kiosk, but only `push` turns pixels - the driver takes native landscape only.
 - `inky.set_image` re-dithers anything that is not already a 6-color "P" image, so `render.dither.dither` must hand it a palette mapping 1:1 onto the driver's. `tests/test_panel.py` pins this.
-
-## The render package
-
-- `render/` is the PIL work: the collage and the plate, the packers behind the collage (`packing.py`), the furniture they share (`page.py`, `paper.py`, `fonts.py`, `sizes.py`), and `dither.py` for the panel's six colors.
 
 ## The collage is the product, not a dashboard
 
 `render/collage.py` + `render/paper.py`.
 
+- The collage looks printed on one sheet of paper: birds lie flat on the page, with no drop shadows, glows, vignettes or other effects that lift them off it.
 - Birds are packed by their alpha silhouette so opaque pixels never overlap and nothing clips; halos are normalized and feathered onto paper at render time, assets untouched.
 - A bird's size is its mass compressed by `SIZE_EXPONENT` times its plate's `sizes.span_ratio`. The ratio rides in the weight, not in `dim` alone, so `base`'s area estimate and its 70% cap still measure what gets drawn. `_layouts` does not key on the boxes, so a tool that changes them at runtime has to clear it.
 - The packer works in whole pixels (`packing._STEP`, `collage._OVERLAP_PX`), so it is not scale-invariant: it packs at `_PACK_SHORT` and scales the placements to the output. Packing at the output size instead swapped birds between the panel and the kiosk. Sprites and labels are redrawn from source at the target size, never resampled from the packed raster, and a label is centred in the box `_with_label` reserved for it since a re-rasterized font is not exactly `width × scale`.
@@ -46,6 +43,5 @@ Covers `service.py`, `panel.py`, `buttons.py` and the `render/` package.
 
 ## The buttons are settings writes (`buttons.py`)
 
-- Plain GPIO read with `gpiod` on a daemon thread; pins key off `Panel.driver` (the 13.3" moves C to line 25).
+- Pins key off `Panel.driver` (the 13.3" moves C to line 25).
 - A press only ever calls `SettingsStore.update`, so nothing crosses threads and presses during a refresh coalesce.
-- A cycles display modes, B toggles names, C rotates a quarter turn clockwise, and D walks styles.

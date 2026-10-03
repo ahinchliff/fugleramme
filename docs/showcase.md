@@ -78,6 +78,12 @@ Frames people have running around the world. Click one to open it.
       <figcaption>Mississippi, USA <small>fugleramme.flerp.xyz</small></figcaption>
     </a>
   </figure>
+  <figure>
+    <a href="https://fugleramme.jstaff.trade/">
+      <img src="https://fugleramme.jstaff.trade/collage.png" alt="The frame in Vienna, Virginia, USA" loading="lazy" referrerpolicy="no-referrer">
+      <figcaption>Vienna, Virginia, USA <small>fugleramme.jstaff.trade</small></figcaption>
+    </a>
+  </figure>
 </div>
 
 Running one yourself and want to share with others? Post the link in

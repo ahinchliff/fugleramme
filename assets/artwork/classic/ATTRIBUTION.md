@@ -32,6 +32,9 @@ Sharpe** (1850-1883), from the Commons category
 public domain (PD-Art, PD-old-100); and *The Birds of Australia* (1840-1848),
 illustrated by **John and Elizabeth Gould** and **Henry Constantine Richter**,
 scans from Smithsonian Libraries via [BHL](https://www.biodiversitylibrary.org/), [University of Kansas](https://digital.lib.ku.edu/ku-gould), and [Project Gutenberg / Internet Archive](https://www.gutenberg.org/ebooks/62524),
+public domain; *A Century of Birds from the Himalaya Mountains* (1831-1832), drawn on stone
+by **Elizabeth Gould**, via the [Internet Archive](https://archive.org/details/centurybirdsfro00Goul); and *The Birds of Great Britain* (1862-1873), with **Henry Constantine Richter**,
+scans via the [Internet Archive](https://archive.org/details/birdsgreatbrita3goul),
 public domain. Manifest key: `gould`.
 
 **Dresser** - *A History of the Birds of Europe* by **H. E. Dresser**
@@ -83,7 +86,7 @@ Internet Archive scans via Wikimedia Commons (no known copyright restrictions),
 and [Metropolitan Museum of Art](https://www.metmuseum.org/art/collection) scans
 (CC0).
 
-**Naumann** - *Naturgeschichte der Vögel Mitteleuropas* by **Johann Friedrich Naumann**, revised and edited by **Carl R. Hennicke** (1897-1905), chromolithographs by **J. G. Keulemans** and others, lithographed and printed by **Fr. Eugen Köhler** in Gera-Untermhaus, Internet Archive scans from the Commons category [Naturgeschichte der Vögel Mitteleuropas](https://commons.wikimedia.org/wiki/Category:Naturgeschichte_der_V%C3%B6gel_Mitteleuropas). Public domain (PD-scan / PD-old-70-expired). Manifest key: `naumann`.
+**Naumann** - *Naturgeschichte der Vögel Mitteleuropas* by **Johann Friedrich Naumann**, revised and edited by **Carl R. Hennicke** (1897-1905), chromolithographs by **J. G. Keulemans** and others, lithographed and printed by **Fr. Eugen Köhler** in Gera-Untermhaus, Internet Archive scans from the Commons category [Naturgeschichte der Vögel Mitteleuropas](https://commons.wikimedia.org/wiki/Category:Naturgeschichte_der_V%C3%B6gel_Mitteleuropas); and the plates of *Johann Andreas Naumann's Naturgeschichte der Vögel Deutschlands* (1820-1844), hand-coloured engravings, Biodiversity Heritage Library scans via the [Internet Archive](https://archive.org/details/johannandreasnau13naum), with an original watercolour for them from the **Iconographia Zoologica** collection of the **University of Amsterdam** Special Collections, via the Commons category [Iconographia Zoologica](https://commons.wikimedia.org/wiki/Category:Iconographia_Zoologica). Public domain (PD-scan / PD-old-70-expired). Manifest key: `naumann`.
 
 **Fuertes** - *Birds of New York, Parts 1 & 2* by **Elon Howard Eaton** (New York State Museum, Memoir 12; Albany: University of the State of New York, 1910-1914), color plates painted by **Louis Agassiz Fuertes**, Internet Archive scans from the Commons category [Birds of New York (Eaton)](https://commons.wikimedia.org/wiki/Category:Birds_of_New_York_(Eaton)).  Public domain (PD-scan / PD-old-70-expired). Manifest key: `fuertes`.
 Also chromolithographs after his watercolours in the *Harriman Alaska series*
@@ -109,7 +112,7 @@ Public domain. Manifest key: `legge`.
 
 **Sclater** - *Exotic Ornithology* by **Philip Lutley Sclater** and **Osbert Salvin** (London: Bernard Quaritch, 1869), plates by **Joseph Smit**, Smithsonian Libraries scan on the [Internet Archive](https://archive.org/details/Exoticornitholo00Scla). Public domain (not in copyright; Smit died 1929). Manifest key: `sclater`.
 
-**Elliot** - *The New and Heretofore Unfigured Species of the Birds of North America* by **Daniel Giraud Elliot** (1869), plates drawn by **Joseph Wolf** and others, lithographed by **C. P. Tholey**, printed by **Bowen & Co.**, Biodiversity Heritage Library scan on the [Internet Archive](https://archive.org/details/newheretoforeun1elli). Public domain (PD-old-70-expired; Wolf died 1899). Manifest key: `elliot`.
+**Elliot** - *The New and Heretofore Unfigured Species of the Birds of North America* by **Daniel Giraud Elliot** (1869), plates drawn by **Joseph Wolf** and others, lithographed by **C. P. Tholey**, printed by **Bowen & Co.**, Biodiversity Heritage Library scan on the [Internet Archive](https://archive.org/details/newheretoforeun1elli); and *A Monograph of the Phasianidae* (1870-1872), plates after **Joseph Wolf** lithographed by **Joseph Smit**, from the Commons category [A monograph of the Phasianidae - Elliot](https://commons.wikimedia.org/wiki/Category:A_monograph_of_the_Phasianidae_-_Elliot). Public domain (PD-old-70-expired; Wolf died 1899). Manifest key: `elliot`.
 
 **Dawson** - *The Birds of California* by **William Leon Dawson** (San Diego: South Moulton Company, 1923), color plates by **Allan Brooks**, Biodiversity Heritage Library scan on the [Internet Archive](https://archive.org/details/birdsofcaliforni02daws). Public domain (published in the US before 1929; Brooks died 1946). Manifest key: `dawson`.
 
@@ -148,3 +151,11 @@ CC BY 2.0. Manifest key: `jardine`.
 **Martinet** - *Planches enluminées d'histoire naturelle* (1765-1783) by **Buffon** and **Daubenton**, plates drawn and engraved by **François-Nicolas Martinet**. Scans from the **Iconographia Zoologica** collection of the **University of Amsterdam** Special Collections (Artis Library), via the Commons category [Iconographia Zoologica](https://commons.wikimedia.org/wiki/Category:Iconographia_Zoologica). Public domain. Manifest key: `martinet`.
 
 **Madarász** - plates by **Gyula Madarász** for the birds of *Zoologische Ergebnisse der dritten asiatischen Forschungsreise des Grafen Eugen Zichy* (1901), colour lithographs by **Werner & Winter**. McGill University Library scans via the [Internet Archive](https://archive.org/details/McGillLibrary-rbsc_zichy-jeno-grof_QL300H671901-17240). Public domain. Manifest key: `madarasz`.
+
+**Smith** - *Illustrations of the Zoology of South Africa* by **Andrew Smith** (1838), the plates from his expedition into the interior of South Africa of 1834-1836. Scans via the [Internet Archive](https://archive.org/details/illustrationsofz19220smit) and the Commons category [Illustrations of the zoology of South Africa - Ornithology](https://commons.wikimedia.org/wiki/Category:Illustrations_of_the_zoology_of_South_Africa_-_Ornithology). Public domain. Manifest key: `smith`.
+
+**Hahn** - *Vögel aus Asien, Africa, America und Neuholland, in Abbildungen nach der Natur mit Beschreibungen* by **Carl Wilhelm Hahn** (1818-1836), issued in parts. Scans from the **Iconographia Zoologica** collection of the **University of Amsterdam** Special Collections (Artis Library), via the Commons category [Iconographia Zoologica](https://commons.wikimedia.org/wiki/Category:Iconographia_Zoologica). Public domain. Manifest key: `hahn`.
+
+**Barbiers** - watercolour drawings by **Pieter Barbiers** in the **Rijksmuseum**, Amsterdam, via the Commons category [Drawings of birds in the Rijksmuseum Amsterdam](https://commons.wikimedia.org/wiki/Category:Drawings_of_birds_in_the_Rijksmuseum_Amsterdam). CC0. Manifest key: `barbiers`.
+
+**Lear** - *Illustrations of the Family of Psittacidae, or Parrots* by **Edward Lear** (1832), hand-coloured lithographs printed by **C. Hullmandel**, via the Commons category [Illustrations of the Family of Psittacidae, or Parrots (1832) by Edward Lear](https://commons.wikimedia.org/wiki/Category:Illustrations_of_the_Family_of_Psittacidae,_or_Parrots_(1832)_by_Edward_Lear). Public domain. Manifest key: `lear`.

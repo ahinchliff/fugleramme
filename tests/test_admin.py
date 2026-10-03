@@ -58,6 +58,13 @@ def test_the_page_still_fills_every_slot_with_the_detector_gone(tmp_path, source
     assert "detector unreachable" in page
 
 
+def test_the_detector_tab_counts_every_bird_heard_without_art(tmp_path, source):
+    heard = source(count=40, seed=0).species_since(0)
+    page = _page(tmp_path, source(count=40, seed=0))  # no style folder: nothing has art
+    assert f'<dd class="missing">{len(heard)} birds <button' in page
+    assert page.count(" detection", page.index('data-copy="')) >= len(heard)
+
+
 def test_every_asset_the_page_links_is_one_the_server_serves(tmp_path, source):
     linked = set(re.findall(r'(?:href|src)="(/[^"?]*)', _page(tmp_path, source())))
     assert linked == {"/", "/admin.css", "/admin.js"}
@@ -77,6 +84,28 @@ def test_a_species_with_no_artwork_is_marked_rather_than_dropped(tmp_path):
     assert html.count("<li") == 2
     assert 'class="noart"' in html and "Corvus cornix" in html
     assert admin.species_html([], name_of) == '<li class="empty">none yet</li>'
+
+
+def test_a_bird_without_art_is_a_line_the_issue_form_takes():
+    text = admin.missing_text([("Sturnus unicolor", 1204), ("Pica pica", 1)])
+    assert text.splitlines() == [
+        "Sturnus unicolor (Spotless Starling) - 1204 detections",
+        "Pica pica (Eurasian Magpie) - 1 detection",
+    ]
+    assert admin.missing_text([("Nonexistus birdus", 3)]) == "Nonexistus birdus - 3 detections"
+
+
+def test_the_issue_carries_the_list_while_github_takes_it():
+    short = admin.missing_row([("Sturnus unicolor", 1204)])
+    assert short.startswith("1 bird <button") and "species=Sturnus+unicolor" in short
+
+    long = admin.missing_row([(f"Sturnus unicolor{i}", 1204) for i in range(300)])
+    assert "species=" not in long
+    assert long.count(" detections") == 300  # Copy always has the whole list
+
+
+def test_a_station_with_art_for_every_bird_says_so():
+    assert admin.missing_row([]) == "none"
 
 
 def test_a_plate_with_a_citation_links_to_it(tmp_path):

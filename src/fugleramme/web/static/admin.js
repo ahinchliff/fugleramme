@@ -36,6 +36,20 @@ const state = document.getElementById("state");
 sessionStorage.setItem("version", cfg.version);
 if (state && was && was !== cfg.version) state.textContent = "updated to v" + cfg.version;
 
+// Plain http has no clipboard API, so copy through a selected scratch textarea.
+for (const button of document.querySelectorAll("button.copy")) {
+  button.addEventListener("click", () => {
+    const scratch = document.createElement("textarea");
+    scratch.value = button.dataset.copy;
+    document.body.append(scratch);
+    scratch.select();
+    document.execCommand("copy");
+    scratch.remove();
+    button.textContent = "Copied";
+    setTimeout(() => { button.textContent = "Copy"; }, 1500);
+  });
+}
+
 const tabs = document.querySelectorAll("nav.tabs button");
 // Display and Frame share one form and one preview.
 const settings = document.getElementById("settings");

@@ -33,7 +33,7 @@ Hardware, install and operations docs: **[arnegiacomo.dev/fugleramme](https://ar
 ## Inspiration
 
 The look came from a [WWF Verdens naturfond poster by Axel Thorenfeldt](https://www.axelthorenfeldt.com/news/wwf-verdens-naturfonds-fugleskole)
-hanging on my wall, the live-frame idea from [AvianVisitors](https://theodore.net/projects/AvianVisitors/) that I saw on Instagram,
+hanging on my wall, the live-frame idea from Teddy Warner's [AvianVisitors](https://theodore.net/projects/AvianVisitors/) that I saw on Instagram,
 and the detection from [BirdNET-Go](https://github.com/tphakala/birdnet-go) - I wanted a version of that poster showing the actual birds in my garden.
 
 ## How it works
@@ -137,12 +137,13 @@ Want to help?
   [FAQ](https://arnegiacomo.dev/fugleramme/faq/) first, then
   [Discussions](https://github.com/arnegiacomo/fugleramme/discussions)
 - **A fix, a doc change, or a bird you have cut** - open a PR, no issue needed
+- **Don't know where to start** - the [good first issues](https://github.com/arnegiacomo/fugleramme/labels/good%20first%20issue)
 
 See **[Contributing](CONTRIBUTING.md)** for more info.
 
 ## Similar projects
 
-- [AvianVisitors](https://github.com/Twarner491/AvianVisitors) - BirdNET-Pi, AI-generated illustrations and photo cutouts
+- [AvianVisitors](https://github.com/Twarner491/AvianVisitors) - BirdNET-Pi, AI-generated illustrations and photo cutouts, also sold as [kits](https://theodore.net/store/)
 - [inky-bird-frame](https://github.com/veteranbv/inky-bird-frame) - BirdNET, field-journal illustrations on an Inky panel
 - [HABirdDashboard](https://github.com/adamoberley/HABirdDashboard) - BirdNET-Go, a collage card for Home Assistant
 - [belkins-birdnet](https://github.com/Belkins/belkins-birdnet) - BirdNET-Pi, AI-generated kachō-e style illustrations
@@ -151,6 +152,14 @@ See **[Contributing](CONTRIBUTING.md)** for more info.
 - [Plate197](https://github.com/kevinl95/Plate197) - BirdNET, Audubon plates on a Raspberry Pi touchscreen
 
 Fugleramme shares no code or art with them.
+
+## Built on fugleramme
+
+- [fugleramme-samsung-frame](https://github.com/conradj/fugleramme-samsung-frame) - sends the collage to a Samsung Frame TV in Art Mode
+- [birdnet-frame](https://github.com/icecoldfire/birdnet-frame) - a Docker container that sends the collage to a Samsung Frame TV in Art Mode
+- [birdnet_eink](https://github.com/Sidiox/birdnet_eink) - the artwork on a LilyGO T5 4.7" ESP32 e-ink display
+- [birdframe](https://github.com/ben-gy/birdframe) - the collage in greyscale on a QuirkLogic Papyr 13.3" e-ink tablet
+- [Cobalt Birds](https://github.com/BandarLabs/Cobalt/tree/main/apps/birds) - the collage on a Kobo e-reader running Cobalt
 
 ## License
 

@@ -12,14 +12,14 @@ from dataclasses import replace
 from datetime import UTC, datetime
 from pathlib import Path
 from string import Template
-from urllib.parse import urlparse
+from urllib.parse import urlencode, urlparse
 
 from .. import __version__, modes, updates
 from ..api import probe
-from ..config import BIRDNET_PORT, DOCS_URL, WEB_ASPECTS, WEB_HEIGHTS
+from ..config import BIRDNET_PORT, DOCS_URL, NEW_ISSUE_URL, WEB_ASPECTS, WEB_HEIGHTS
 from ..languages import NONE, Namer, catalog, catalog_failure, ordered
 from ..modes import MODES
-from ..names import available_styles, image_for, origin_of, source_of
+from ..names import available_styles, image_for, normalize, origin_of, source_of
 from ..render.collage import KEY_LIMIT, NO_LIMIT, RANKINGS
 from ..render.fonts import FONTS, LABEL_SIZES
 from ..render.packing import LAYOUTS
@@ -36,6 +36,7 @@ from ..settings import (
 )
 from ..source import NEEDS_PASSWORD, Unavailable
 from ..status import Status
+from ..taxa import common_of
 from . import LOGIN, LOGOUT, STATIC_DIR, hostinfo
 
 CHECKBOXES = "checkboxes"  # hidden field naming the checkboxes a form carries
@@ -46,6 +47,9 @@ PASSWORD_SET = "\u2022" * 8
 _LOOPBACK = ("127.0.0.1", "localhost", "::1", "0.0.0.0")
 
 _ASPECT = {0: "(landscape)", 90: "(portrait)"}
+
+ISSUE_TEMPLATE = "artwork_request.yml"
+MAX_URL = 8000  # GitHub refuses longer; past it the form opens empty
 
 # Style and plate names that don't title-case into something readable.
 _NAMES = {
@@ -85,6 +89,46 @@ def subjects(ctx: modes.Context) -> list[tuple[str, str | None, str]]:
         # Unlisted (a hand-filled style keeps no manifest): name the style itself.
         rows.append((name, source_of(pick) or ctx.style, origin_of(pick)))
     return rows
+
+
+def missing(ctx: modes.Context) -> list[tuple[str, int]]:
+    """Every species the station has ever heard that this style cannot draw,
+    with its detection count, most heard first."""
+    keys = ctx.drawable()
+    return [(name, n) for name, n in ctx.source.species_since(0) if normalize(name) not in keys]
+
+
+def missing_text(rows: list[tuple[str, int]]) -> str:
+    """One line per species, as the Missing bird issue's Species field takes them."""
+    lines = []
+    for name, count in rows:
+        common = common_of(name)
+        named = f"{name} ({common})" if common else name
+        lines.append(f"{named} - {count} detection{'' if count == 1 else 's'}")
+    return "\n".join(lines)
+
+
+def request_url(species: str = "") -> str:
+    """A new Missing bird issue, its Species field holding `species`."""
+    query = {"template": ISSUE_TEMPLATE} | ({"species": species} if species else {})
+    return f"{NEW_ISSUE_URL}?{urlencode(query)}"
+
+
+MISSING = "Birds your station has heard (all time) that have no artwork yet"
+
+
+def missing_row(rows: list[tuple[str, int]]) -> str:
+    """The Without art row: a count, a copy of the list, and the issue with it filled in."""
+    if not rows:
+        return "none"
+    text = missing_text(rows)
+    filled = request_url(text)
+    url = filled if len(filled) <= MAX_URL else request_url()
+    return (
+        f"{len(rows)} bird{'' if len(rows) == 1 else 's'} "
+        f'<button type="button" class="copy" data-copy="{html.escape(text)}">Copy</button> · '
+        f'<a href="{html.escape(url)}" target="_blank" rel="noopener">Create GitHub issue</a>'
+    )
 
 
 def _display_name(name: str) -> str:
@@ -552,9 +596,9 @@ def page(
     names_failure = catalog_failure()
     detector_state, detector_version = hostinfo.detector(settings.detector_url)
     try:
-        latest, rows = ctx.source.latest(), subjects(ctx)
+        latest, rows, without = ctx.source.latest(), subjects(ctx), missing(ctx)
     except Unavailable:
-        latest, rows = None, None
+        latest, rows, without = None, None, None
     windowed = modes.mode_of(settings.mode).windowed
     online, iface = hostinfo.online()
     rendered = _stamp(status.rendered_at) if status.rendered_at else "not yet"
@@ -624,4 +668,6 @@ def page(
             if latest
             else ("none yet" if rows is not None else _outage(detector_state))
         ),
+        missing_hint=_hint(MISSING),
+        missing=missing_row(without) if without is not None else _outage(detector_state),
     )
