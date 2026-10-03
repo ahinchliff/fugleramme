@@ -11171,6 +11171,18 @@
    818
   ]
  },
+ "birds/scythrops-novaehollandiae.webp": {
+  "box": [
+   0.022396416573348264,
+   0.035,
+   0.8297872340425532,
+   0.835
+  ],
+  "cut": [
+   893,
+   1200
+  ]
+ },
  "birds/serinus-serinus.webp": {
   "box": [
    0.19962192810687823,
